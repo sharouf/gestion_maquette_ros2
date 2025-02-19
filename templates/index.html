@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle du Ventilateur</title>
+</head>
+<body>
+    <h1>Contrôle du Ventilateur</h1>
+
+    {% if message %}
+        <p><strong>État :</strong> {{ message }}</p>
+    {% endif %}
+
+    <form action="/control" method="post">
+        <button type="submit" name="action" value="on">Allumer</button>
+        <button type="submit" name="action" value="off">Éteindre</button>
+    </form>
+</body>
+</html>
+
